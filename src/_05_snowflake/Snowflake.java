@@ -6,25 +6,37 @@ package _05_snowflake;
 
 import java.awt.Color;
 
+import org.jointheleague.graphical.robot.Robot;
+
 
 public class Snowflake {
 	
 	public static void main(String[] args) {
 
 		// #1. Make a new Robot
-
+		Robot yee=new Robot();
 
 		// #2. Set your robot’s position to x=300 and y=300
-
+		yee.moveTo(300, 300);
 
 		// #3. Put the robot's pen down
-
+		yee.penDown();
 
 		// #4. Set the robot’s speed to 5
-
+		yee.setSpeed(5);
 
 		// #5. use a for loop below to do everything ( #6, #7, #8, #9, #12, #13, #14 ) 6 times (use i as the counter)
-
+		for (int i = 0; i < 120389; i++) {
+			yee.setPenColor(0,0,0);
+			yee.move(50);
+			yee.turn(50);
+			if(i%2==1)	{
+				yee.setPenColor(255, 0, 0);
+			}
+			else	{
+				yee.setPenColor(0, 0, 255);
+			}
+		}
 			
 			// #6. Set the pen color to black
 
